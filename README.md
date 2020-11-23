@@ -1,3 +1,5 @@
+<img src="https://github.com/ArielOliveira/DungeonGenerator/blob/master/Assets/demo/Dungeon.jpg" width="600" height="150">
+
 # DungeonGenerator
 A Dungeon Generator made in Unity3D
 
@@ -23,5 +25,5 @@ You can see all the information on how it works, including the original source c
 - Abstraction of the structures enabling further implementation for decoration
           
 ## Demo
- <img src="https://github.com/ArielOliveira/DungeonGenerator/blob/master/demo/dungeon.png" width="270" height="270">
+ <img src="https://github.com/ArielOliveira/DungeonGenerator/blob/master/Assets/demo/MainWide.jpg" width="270" height="270">
 
