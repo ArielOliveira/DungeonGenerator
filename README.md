@@ -22,7 +22,7 @@ You can see all the information on how it works, including the original source c
 
 ## Features
 - 3D Visualization of the algorithm's output
-- Abstraction of the structures enabling further implementation for decoration
+- Abstraction of the structures enabling further implementation for decoration assets
           
 ## Demo
 - Video Clip: https://drive.google.com/file/d/1dS5h15slvBa3YsIhAAFWiGA4ESOwJ0F5/view?usp=sharing
