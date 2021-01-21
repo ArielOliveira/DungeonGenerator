@@ -7,8 +7,6 @@ using Type = Structure.Type;
 
 public class DungeonGenerator : MonoBehaviour {
     public List<GameObject> wallObjs;
-    //public GameObject edge;
-    //public GameObject corner;
     public List<GameObject> floorObjs;
     public List<GameObject> doorObjs;
     public GameObject ceilingObj;
@@ -352,6 +350,18 @@ public class DungeonGenerator : MonoBehaviour {
     
         currGeneration.Clear();
         return stillActive;
+    }
+
+    public void OverrideIteration() {
+        List<Builder> currGeneration = new List<Builder>();
+        foreach (Builder builder in dungeonBuilders)
+            currGeneration.Add(builder);
+
+        foreach (Builder builder in currGeneration)
+            if (!builder.StepAhead())
+                dungeonBuilders.Remove(builder);
+
+        currGeneration.Clear();
     }
 
     public void SeedCrawlersInTunnels() {
@@ -854,6 +864,7 @@ public class DungeonGenerator : MonoBehaviour {
     }
     public void AddRoom(Room r) {
         rooms.Add(r);
+        Debug.Log("New Room Added");
     }
 
     public Room FindRoom(Vector2Int at) {
@@ -921,7 +932,7 @@ public class DungeonGenerator : MonoBehaviour {
             r.SetCeiling(this);
     }
 
-    public void SetLights() {
+   /* public void SetLights() {
         foreach(Tunnel t in tunnels)
            t.SetLights(this);
 
@@ -930,7 +941,7 @@ public class DungeonGenerator : MonoBehaviour {
 
         foreach(Room r in rooms)
             r.SetLights(this);
-    }
+    }*/
 
     public int GetTunnelerNum() {
         int count = 0;

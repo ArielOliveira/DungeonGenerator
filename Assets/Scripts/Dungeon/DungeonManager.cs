@@ -126,7 +126,7 @@ public class DungeonManager : MonoBehaviour
             setEdges = false;
             generator.SetEdges();
             generator.SetCeiling();
-            generator.SetLights();
+            //generator.SetLights();
             generator.PlaceTunnels();
             generator.PlaceAnteRooms();
             generator.PlaceRooms();

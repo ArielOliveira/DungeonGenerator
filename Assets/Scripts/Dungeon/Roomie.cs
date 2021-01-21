@@ -90,11 +90,16 @@ public class Roomie : Builder {
     } 
 
     public override bool StepAhead() {
-        if (!map.WantsMoreRoomsD(roomSize))
+        Debug.Log("Beginning Room");
+        if (!map.WantsMoreRoomsD(roomSize)) {
+            Debug.Log("Room Denied");
             return false;
+
+        }
         
         if (generation != map.ActiveGeneration) {
             Debug.Assert(generation > map.ActiveGeneration);
+            Debug.Log("Current Generation = " + map.ActiveGeneration + "Roomie Generation = " + generation);
             return true;
         }
         age++;
@@ -266,7 +271,7 @@ public class Roomie : Builder {
                 return false;
             } else 
                 dW++;
-        } while ((double)frontFree-2 >= (2*(double)dW+1 * aR));
+        } while (/*(double)frontFree-2 >= (2*(double)dW+1 * aR)*/false);
         return false;
     }
 }

@@ -33,6 +33,6 @@ public class AnteRoom : Structure {
          
          cleanEdges.Clear();
    }
-    public override void SetLights(DungeonGenerator map) {}
+    //public override void SetLights(DungeonGenerator map) {}
     public override void SetCorners(DungeonGenerator map) {}
 }

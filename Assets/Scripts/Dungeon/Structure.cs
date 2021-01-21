@@ -38,6 +38,7 @@ public abstract class Structure {
     protected Vector2Int center;
     protected Vector2Int start;
     protected Vector2Int end;
+
     public Structure(List<Tile> interior, List<Tile> edges, List<Tile> walls, List<Tile> ceiling, List<Tile> corners, List<Tile> doors, List<Tile> columns, List<Tile> lights, Vector2Int center, Vector2Int start, Vector2Int end, bool inDungeon, int width, int length) {
         this.interior = interior;
         this.walls = walls;
@@ -151,7 +152,8 @@ public abstract class Structure {
 
     public abstract void SetEdges(DungeonGenerator map);
     public abstract void SetCorners(DungeonGenerator map);
-    public abstract void SetLights(DungeonGenerator map);
+    //public abstract void SetLights(DungeonGenerator map);
+
     public virtual void SetCeiling(DungeonGenerator map) {
         foreach (Tile floor in interior)
             AddTile(floor.position, floor.facing, Type.CEILING);

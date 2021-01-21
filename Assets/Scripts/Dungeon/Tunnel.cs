@@ -36,7 +36,7 @@ public class Tunnel : Structure {
  
    public override void SetCorners(DungeonGenerator map) {}
 
-   public override void SetLights(DungeonGenerator map) {
+   /*public override void SetLights(DungeonGenerator map) {
       if (columns.Count == 0) {
          foreach (Tile wall in walls) {
             Vector2Int pos = wall.position;
@@ -117,5 +117,5 @@ public class Tunnel : Structure {
             }
          }
       }
-   }
+   }*/
 }

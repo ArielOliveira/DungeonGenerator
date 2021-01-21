@@ -55,13 +55,15 @@ public class Room : Structure {
 
         cleanEdges.Clear();
     }
-    public override void SetLights(DungeonGenerator map) {
+    
+    /*public override void SetLights(DungeonGenerator map) {
         foreach (Tile door in doors) {
             AddTile(door.position, door.facing, Type.LIGHT);
             map.SetLightAt(door.position);
             AddTile(door.position, -door.facing, Type.LIGHT);
             map.SetLightAt(door.position);
         }
-    }
+    }*/
+
     public override void SetCorners(DungeonGenerator map) {}
 }
